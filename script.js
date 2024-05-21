@@ -35,3 +35,20 @@ elements.forEach(function (e) {
   // console.log("hay")
 })
 
+var menu = document.querySelector("nav h2")
+var navimg = document.querySelector("nav img")
+var full = document.querySelector(".full-screen")
+var flag = 0
+menu.addEventListener("click", function(){
+  if(flag == 0){
+    full.style.top = 0
+    navimg.style.opacity = 0
+    flag= 1
+  }
+  else{
+    full.style.top = "-100%"
+    navimg.style.opacity = 1
+    flag= 0
+  }
+})
+
